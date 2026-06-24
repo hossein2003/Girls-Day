@@ -31,7 +31,8 @@ animation:pulse 1s infinite;
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Vazirmatn',sans-serif;
+unction
+ont-family:'Vazirmatn',sans-serif;
 }
 
 body{
@@ -385,7 +386,8 @@ function createHeart(){
 const heart=document.createElement("div");
 heart.classList.add("heart");
 
-heart.innerHTML="💖";
+const emojis = ["💖", "🌻", "🌼"];
+heart.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
 
 heart.style.left=Math.random()*100+"%";
 heart.style.fontSize=(15+Math.random()*30)+"px";
@@ -399,6 +401,7 @@ setTimeout(()=>{
 heart.remove();
 },10000);
 }
+
 
 setInterval(createHeart,300);
 
